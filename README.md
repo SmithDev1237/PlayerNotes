@@ -33,10 +33,10 @@ PlayerNotes uses a JSON-based configuration that automatically saves your data, 
 
 ## Screenshots
 
-![Main Interface](https://github.com/SmithDev1237PlayerNotes/blob/img/main_interface.png)  
+![Main Interface](https://github.com/SmithDev1237PlayerNotes/blob/main/img/main_interface.png)  
 *Main interface displaying notes and ratings for targeted players.*
 
-![Advanced Window](https://github.com/SmithDev1237/PlayerNotes/blob/img/advanced_window.png)  
+![Advanced Window](https://github.com/SmithDev1237/PlayerNotes/blob/main/img/advanced_window.png)  
 *Advanced window for managing all saved player data.*
 
 ## Contributing
