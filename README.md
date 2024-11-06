@@ -11,7 +11,7 @@
 ## Installation
 
 1. **Download the repository**:
-git clone https://github.com/your-username/PlayerNotes.git
+git clone https://github.com/SmithDev1237/PlayerNotes.git
 
 2. **Place the Addon in the Ashita Addons Folder**:  
 Copy the `PlayerNotes` folder to your Ashita `addons` directory:  
