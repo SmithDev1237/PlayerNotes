@@ -115,7 +115,7 @@ local function render_advanced_window()
 
             imgui.TableNextColumn() imgui.Text(player)
             imgui.TableNextColumn() imgui.TextColored(color, stars)
-            imgui.TableNextColumn() imgui.Text(linkshell)
+            imgui.TableNextColumn() imgui.TextWrapped(linkshell)
             imgui.TableNextColumn() imgui.TextWrapped(notes[1] or "No notes available")
 
             imgui.TableNextColumn()
@@ -148,14 +148,18 @@ local function render_advanced_window()
         if imgui.Button("Close") then show_advanced_window = not show_advanced_window end
     else
         imgui.Text("Editing notes for: " .. selected_player)
+        imgui.Text("")
         for i, label in ipairs({"Terrible", "Bad", "Average", "Good", "Great"}) do
             if imgui.RadioButton(label .. "##advancedRating" .. i, advanced_rating == i) then
                 advanced_rating = i
                 update_rating_for_player(selected_player, advanced_rating)
             end
+            imgui.SameLine()
         end
+        imgui.Text("")
         imgui.InputText("Linkshell", new_linkshell, 64)
-        imgui.InputTextMultiline("##AdvancedNote", advanced_note, 256, 100)
+        imgui.Text("")
+        imgui.InputTextMultiline("Note##AdvancedNote", advanced_note, 256, 100)
         if imgui.Button("Save Note") then
             add_or_update_note_for_player(selected_player, advanced_note[1], new_linkshell[1])
             selected_player = ""
